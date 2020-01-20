@@ -11,7 +11,7 @@ ENV LC_MESSAGES=C
 # System
 #################
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone && \
-    dnf update && \
+    dnf upgrade -y && \
     dnf install -y langpacks-de && \
     dnf clean all
 
